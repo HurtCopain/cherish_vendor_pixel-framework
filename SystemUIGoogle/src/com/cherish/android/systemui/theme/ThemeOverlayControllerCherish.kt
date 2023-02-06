@@ -48,6 +48,7 @@ import com.android.systemui.settings.UserTracker
 import com.android.systemui.statusbar.policy.ConfigurationController
 import com.android.systemui.statusbar.policy.ConfigurationController.ConfigurationListener
 import com.android.systemui.statusbar.policy.DeviceProvisionedController
+import com.android.internal.statusbar.IStatusBarService
 import com.android.systemui.theme.ThemeOverlayApplier
 import com.android.systemui.theme.ThemeOverlayController
 import com.android.systemui.util.settings.SecureSettings
@@ -88,6 +89,7 @@ class ThemeOverlayControllerCherish @Inject constructor(
     @Main resources: Resources,
     wakefulnessLifecycle: WakefulnessLifecycle,
     systemSettings: SystemSettings,
+    barService: IStatusBarService,
     private val configurationController: ConfigurationController,
 ) : ThemeOverlayController(
     context,
@@ -106,6 +108,7 @@ class ThemeOverlayControllerCherish @Inject constructor(
     resources,
     wakefulnessLifecycle,
     systemSettings,
+    barService,
     configurationController,
 ) {
 
