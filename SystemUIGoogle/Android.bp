@@ -69,10 +69,6 @@ android_app {
     ],
     
     optimize: {
-     enabled: true,
-                optimize: true,
-                shrink: true,
-                proguard_compatibility: false,
         proguard_flags_files: ["proguard.flags"],
     },
 
